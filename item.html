@@ -14,27 +14,19 @@
         }
 
         body {
-
-background-image:
-
-url('rusdi.jpeg');
-
-background-size: cover;
-
-background-position: center;
-
-background-repeat: no-repeat;
-
-height: 1600px;
-
-width: 900px;
-
-display: flex;
-
-align-items: center;
-
-justify-content: center;
-}
+            background-image: url('rusdi.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* Menjaga background tetap kokoh saat di-scroll */
+            min-height: 100vh; /* Full size mengikuti tinggi layar HP/perangkat */
+            width: 100%; /* Full size mengikuti lebar layar HP/perangkat */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px; /* Jarak aman agar kotak tidak menempel ke pinggir layar HP */
+            position: relative;
+        }
 
         body::before {
             content: '';
@@ -159,18 +151,18 @@ justify-content: center;
 
     <script>
         document.getElementById("loginForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      const username = document.getElementById("username").value;
-      const password = document.getElementById("password").value;
+          e.preventDefault();
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
 
-      // Validasi sederhana
-      if(username === "jojo.item" && password === "dedi") {
-        // Pindah ke halaman hideung.html
-        window.location.href = "hideung.html";
-      } else {
-        alert("Username atau password salah.");
-      }
-    });
+          // Validasi sederhana
+          if(username === "jojo.item" && password === "dedi") {
+            // Pindah ke halaman hideung.html
+            window.location.href = "hideung.html";
+          } else {
+            alert("Username atau password salah.");
+          }
+        });
     </script>
 
 </body>
