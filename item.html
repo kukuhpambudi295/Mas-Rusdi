@@ -18,14 +18,14 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            background-attachment: fixed; /* Menjaga background tetap kokoh saat di-scroll */
-            min-height: 100vh; /* Full size mengikuti tinggi layar HP/perangkat */
-            width: 100%; /* Full size mengikuti lebar layar HP/perangkat */
+            height: 100vh; /* Mengunci tinggi tepat sesuai ukuran layar HP */
+            width: 100vw;  /* Mengunci lebar tepat sesuai ukuran layar HP */
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 20px; /* Jarak aman agar kotak tidak menempel ke pinggir layar HP */
+            padding: 20px;
             position: relative;
+            overflow: hidden; /* CRITICAL: Mematikan fungsi scroll atas-bawah & kiri-kanan */
         }
 
         body::before {
